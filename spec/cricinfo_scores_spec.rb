@@ -90,8 +90,11 @@ describe CricInfo::Scores do
 
     game.inns1.team.should == "ENG"
     game.inns1.runs.should == 599
+    game.inns1.wickets.should == 6
+    game.inns1.declared.should == true
     game.inns2.team.should == "BAN"
     game.inns2.runs.should == 296
+    game.inns2.wickets.should == 10
     game.inns3.team.should == "ENG"
     game.inns4.team.should == "BAN"
   end

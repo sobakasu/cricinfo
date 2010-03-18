@@ -92,7 +92,7 @@ module CricInfo
       inns = game.add_innings
       inns.team = team
       inns.runs = runs.to_i
-      inns.wickets = wickets ? wickets.to_i : nil
+      inns.wickets = wickets ? wickets.to_i : 10
       inns.declared = decl ? true : false
       inns
     end
