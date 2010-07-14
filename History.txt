@@ -1,3 +1,8 @@
+=== 0.0.2 2010-07-14
+
+* updated match regex
+* added bin/cricinfo script with 'list' command
+
 === 0.0.1 2010-03-14
 
 * 1 major enhancement:
