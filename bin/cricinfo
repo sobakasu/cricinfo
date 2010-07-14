@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+$:.unshift File.dirname(__FILE__) + '/../lib'
+require 'cricinfo'
+
+def error(message)
+  puts "ERROR: #{message}"
+end
+
+def usage(exit = true)
+  puts "usage: cricinfo <command>"
+  exit 1 if exit
+end
+
+begin
+  command = ARGV[0]
+  usage unless command
+
+  case command
+  when 'list'
+    c = CricInfo::Scores.new
+    c.games.each { |game| puts game.summary }
+  else
+    error("unrecognised command #{command}")
+    usage
+  end
+
+end
