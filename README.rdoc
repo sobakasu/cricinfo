@@ -13,7 +13,7 @@ An interface to cricinfo.com game data (current games only).
 == SYNOPSIS:
 
   c = CricInfo::Scores.new
-  c.games.each { |g| puts game.summary }
+  c.games.each { |game| puts game.summary }
 
   game = c.games.first
   puts game.inns1.runs
