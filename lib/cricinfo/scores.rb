@@ -7,11 +7,11 @@ module CricInfo
     SCORES_PATH = "/s/2497/Scores"
 
     # match name, team1, team2, inningsdata, start_time
-    RE_MATCH = /matchId=.*?">(.+?):\s*(\w+)\s+v\s+(\w+)<\/a>.*?<\/tr>(.*?)<\/tr>(.*?Start time (.*?)\s*<\/b>)?/
+    RE_MATCH = /matchId=.*?">([^:]+):\s*(.*?)\s+v\s+(.*?)<\/a>.*?<\/tr>(.*?)<\/tr>(.*?Start time (.*?)\s*<\/b>)?/
 
     # team1/2, i1runs, i1wickets, i1decl, i2wickets, i2decl, overs
     # (overs optional)
-    RE_INNINGS = /<b>\s*(\w+)\s*<\/b>\s*<b>\s*(\d+)(?:\/(\d+))?(d)?(?:\s*&amp;\s*(\d+)\/(\d+)(d)?)?\s*(?:\(([\d\.]+))?/
+    RE_INNINGS = /<b>\s*(.*?)\s*<\/b>\s*<b>\s*(\d+)(?:\/(\d+))?(d)?(?:\s*&amp;\s*(\d+)\/(\d+)(d)?)?\s*(?:\(([\d\.]+))?/
 
     # start_time (e.g. Start time 09:30 GMT)
     RE_START = /<b>\s*Start\s+time\s+(.*?)\s*<\/b>/

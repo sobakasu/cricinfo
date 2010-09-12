@@ -99,6 +99,26 @@ describe CricInfo::Scores do
     game.inns4.team.should == "BAN"
   end
 
+  # Scores8.html
+  # (team with space in the name)
+
+  it "should initialize and parse score data 8" do
+    CricInfo::Scores.should_receive(:fetch_score_data).and_return(fixture(8))
+    c = CricInfo::Scores.new
+    c.should_not be_nil
+
+    c.games.length.should == 3
+    game = c.games[1]  # LIONS v SOUTH AUST
+    game.innings.length.should == 1
+
+    game.team1.should == "LIONS"
+    game.team2.should == "SOUTH AUST"
+    game.inns1.team.should == "SOUTH AUST"
+    game.inns1.runs.should == 165
+    game.inns1.wickets.should == 4
+  end
+
+
   private
 
   def fixture(number)
