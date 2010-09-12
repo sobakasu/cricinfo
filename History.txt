@@ -1,3 +1,7 @@
+=== 0.0.3 2010-09-12
+
+* bugfix for parsing team names containing spaces
+
 === 0.0.2 2010-07-14
 
 * updated match regex

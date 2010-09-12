@@ -8,7 +8,7 @@ require 'cricinfo/game'
 require 'cricinfo/scores'
 
 module CricInfo
-  VERSION = '0.0.2'
+  VERSION = '0.0.3'
 end
 
 # array monkey patch
