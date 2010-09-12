@@ -35,6 +35,7 @@ module CricInfo
         game = Game.new
         game.name = match_name
         game.type = GAMETYPE_TEST if match_name.match(/Test/)
+        game.type = GAMETYPE_T20 if match_name.match(/^\d+.. Match/)
         game.team1 = team1
         game.team2 = team2
         game.start_time = start ? Time.parse(start) : nil
