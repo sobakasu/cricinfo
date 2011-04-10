@@ -5,3 +5,5 @@ tmp/**/*
 pkg
 doc
 coverage
+.buildpath
+.project

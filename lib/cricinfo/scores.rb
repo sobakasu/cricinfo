@@ -3,7 +3,8 @@ module CricInfo
   class Scores
     include CricInfo::GameTypes
 
-    SCORES_HOST = "m.cricinfo.com"
+    DEBUG = false
+    SCORES_HOST = "m.espncricinfo.com"
     SCORES_PATH = "/s/2497/Scores"
 
     # match name, team1, team2, inningsdata, start_time
