@@ -19,7 +19,13 @@ begin
   case command
   when 'list'
     c = CricInfo::Scores.new
-    c.games.each { |game| puts game.summary; puts }
+    c.games.each do |game|
+      puts "name: " + game.name
+      puts "team1: " + game.team1
+      puts "team2: " + game.team2
+      puts "type: " + game.type_string
+      puts
+    end
   else
     error("unrecognised command #{command}")
     usage
