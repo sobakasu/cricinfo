@@ -1,3 +1,7 @@
+=== 0.0.6 2012-07-19
+
+* fixed gemspec
+
 === 0.0.5 2012-07-19
 
 * random hack to make it work with the current html on the site. need to test again when there is more than one match in progress
